@@ -1,8 +1,18 @@
 <template>
-  <div style="display:flex;justify-content:center">
-    <router-view style="width:1024px"/>
+  <div>
+    <a class="github-fork-ribbon" href="https://github.com/shangdeyou/vue-component-sandbox/" data-ribbon="Fork me on GitHub" title="Fork me on GitHub">Fork me on GitHub</a>
+    <div style="display:flex;justify-content:center">
+      <router-view style="width:1024px"/>
+    </div>
   </div>
 </template>
+
+<script>
+import 'github-fork-ribbon-css/gh-fork-ribbon.css'
+export default {
+
+}
+</script>
 
 <style>
 #app {

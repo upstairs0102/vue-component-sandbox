@@ -8,7 +8,7 @@
       <router-link :to="{name:'demo-prop-sync'}">Demo 2</router-link> | 
       <router-link :to="{name:'demo-full-screen-block'}">Demo 3</router-link> | 
       <router-link :to="{name:'demo-prop-callback'}">Demo 4</router-link> | 
-      <a href="http://shangdeyou.github.io/vue-component-sandbox">Read Me</a>
+      
     </div>
     <router-view></router-view>
   </div>

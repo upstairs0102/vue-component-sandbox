@@ -8,22 +8,22 @@ const routes = [
     component: demo,
     children: [
       {
-        path: '/demo/basic',
+        path: '/basic',
         name: 'demo-basic',
         component: () => import(/* webpackChunkName: "callback" */ '@/views/demo/basic.vue')
       },
       {
-        path: '/demo/prop-sync',
+        path: '/prop-sync',
         name: 'demo-prop-sync',
         component: () => import(/* webpackChunkName: "callback" */ '@/views/demo/propSync.vue')
       },
       {
-        path: '/demo/demo-full-screen-block',
+        path: '/demo-full-screen-block',
         name: 'demo-full-screen-block',
         component: () => import(/* webpackChunkName: "callback" */ '@/views/demo/fullScreenBlock.vue')
       },
       {
-        path: '/demo/prop-callback',
+        path: '/prop-callback',
         name: 'demo-prop-callback',
         component: () => import(/* webpackChunkName: "callback" */ '@/views/demo/propCallback.vue')
       }
