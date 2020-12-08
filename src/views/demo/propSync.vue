@@ -26,6 +26,9 @@
 <script>
 import '@/components/ComponentSandbox/styles.css'
 import ComponentSandbox from '@/components/ComponentSandbox/ComponentSandbox.vue'
+// npm安裝請改以下import程式
+// import ComponentSandbox from 'vue-component-sandbox'
+// import 'vue-component-sandbox/lib/styles.css'
 import Autocomplete from '@/components/demo/Autocomplete.vue'
 
 export default {
