@@ -1,4 +1,4 @@
 module.exports = {
-  publicPath: '/demo/',
+  publicPath: '/vue-component-sandbox/demo/',
   outputDir: 'demo'
 }

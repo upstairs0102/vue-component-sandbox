@@ -1,6 +1,6 @@
 # vue-component-sandbox
 
-## Install
+## Features
 
 快速在Vue專案中建立Component的測試沙箱，提供操作面板可檢視/操作Props以及監聽事件，並依造資料將Component即時呈現在畫面中、操作Component時也會將資料呈現在面板當中。
 
@@ -8,12 +8,25 @@
 
 Vue2.x => vue-json-pretty **v1.7.1** 以上
 
+Vue v3.x，=> vue-json-pretty **v2.0.0-rc2** 以上
+
+## Links
+
+npm: https://www.npmjs.com/package/vue-component-sandbox
+
+Demo: http://shangdeyou.github.io/vue-component-sandbox/demo
+
+## Install
+
+
+Vue2.x
+
 ```
 npm install vue-json-pretty@1.7.1 --save
 npm install vue-component-sandbox --save
 ```
 
-Vue v3.x，=> vue-json-pretty **v2.0.0-rc2** 以上
+Vue v3.x
 
 ```
 npm install vue-json-pretty@2.0.0-rc.2 --save
