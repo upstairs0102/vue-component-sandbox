@@ -1,20 +1,34 @@
 import { createRouter, createWebHashHistory } from 'vue-router'
-import Home from '../views/Home.vue'
+import demo from '@/views/demo.vue'
 
 const routes = [
   {
     path: '/',
-    name: 'Home',
-    component: Home
+    name: 'demo',
+    component: demo,
+    children: [
+      {
+        path: '/demo/basic',
+        name: 'demo-basic',
+        component: () => import(/* webpackChunkName: "callback" */ '@/views/demo/basic.vue')
+      },
+      {
+        path: '/demo/prop-sync',
+        name: 'demo-prop-sync',
+        component: () => import(/* webpackChunkName: "callback" */ '@/views/demo/propSync.vue')
+      },
+      {
+        path: '/demo/demo-full-screen-block',
+        name: 'demo-full-screen-block',
+        component: () => import(/* webpackChunkName: "callback" */ '@/views/demo/fullScreenBlock.vue')
+      },
+      {
+        path: '/demo/prop-callback',
+        name: 'demo-prop-callback',
+        component: () => import(/* webpackChunkName: "callback" */ '@/views/demo/propCallback.vue')
+      }
+    ]
   },
-  {
-    path: '/about',
-    name: 'About',
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () => import(/* webpackChunkName: "about" */ '../views/About.vue')
-  }
 ]
 
 const router = createRouter({

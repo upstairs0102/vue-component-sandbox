@@ -1,0 +1,129 @@
+.component-sandbox .display-block {
+  transform: translate3d(0, 0, 0); /*刻意讓子層級元素的position:fixed失效 */
+  min-height: 500px;
+  overflow: visible;
+  border: 1px solid #e4e7ed;
+}
+.component-sandbox .display-block.expanded {
+  position: absolute;
+  top: 60px;
+  width: 100vw;
+  height: calc(100vh - 60px);
+}
+.component-sandbox .display-error {
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  opacity:0.85;
+  position: absolute;
+  color: white;
+  z-index: 10001;
+}
+.component-sandbox .expand-style {
+  z-index: 2000;
+  position: fixed;
+  left: 0px;
+  top: 0px;
+  /* padding-left: 0px; */
+  /* padding-right: 0px; */
+  overflow: auto;
+  height: 100%;
+  width: 100%;
+  background: rgba(0,0,0,0.8);
+  color: #ffffff;
+}
+.component-sandbox .expand-style > div {
+    border: 0px;
+  }
+.component-sandbox button {
+  margin-left: 10px;
+}
+.component-sandbox .jsontree {
+  min-height: 50px;
+  max-height: 550px;
+  overflow: auto;
+  padding: 10px;
+  background-color: #f5f7fa !important;
+  border: 1px solid #e4e7ed;
+}
+.component-sandbox textarea {
+  width: 100%;
+}
+.component-sandbox .row {
+  display: flex;
+}
+.component-sandbox .col {
+  padding: 10px;
+}
+.component-sandbox .span-1 {
+  width: calc(100% * (1 / 24))
+}
+.component-sandbox .span-2 {
+  width: calc(100% * (2 / 24))
+}
+.component-sandbox .span-3 {
+  width: calc(100% * (3 / 24))
+}
+.component-sandbox .span-4 {
+  width: calc(100% * (4 / 24))
+}
+.component-sandbox .span-5 {
+  width: calc(100% * (5 / 24))
+}
+.component-sandbox .span-6 {
+  width: calc(100% * (6 / 24))
+}
+.component-sandbox .span-7 {
+  width: calc(100% * (7 / 24))
+}
+.component-sandbox .span-8 {
+  width: calc(100% * (8 / 24))
+}
+.component-sandbox .span-9 {
+  width: calc(100% * (9 / 24))
+}
+.component-sandbox .span-10 {
+  width: calc(100% * (10 / 24))
+}
+.component-sandbox .span-11 {
+  width: calc(100% * (11 / 24))
+}
+.component-sandbox .span-12 {
+  width: calc(100% * (12 / 24))
+}
+.component-sandbox .span-13 {
+  width: calc(100% * (13 / 24))
+}
+.component-sandbox .span-14 {
+  width: calc(100% * (14 / 24))
+}
+.component-sandbox .span-15 {
+  width: calc(100% * (15 / 24))
+}
+.component-sandbox .span-16 {
+  width: calc(100% * (16 / 24))
+}
+.component-sandbox .span-17 {
+  width: calc(100% * (17 / 24))
+}
+.component-sandbox .span-18 {
+  width: calc(100% * (18 / 24))
+}
+.component-sandbox .span-19 {
+  width: calc(100% * (19 / 24))
+}
+.component-sandbox .span-20 {
+  width: calc(100% * (20 / 24))
+}
+.component-sandbox .span-21 {
+  width: calc(100% * (21 / 24))
+}
+.component-sandbox .span-22 {
+  width: calc(100% * (22 / 24))
+}
+.component-sandbox .span-23 {
+  width: calc(100% * (23 / 24))
+}
+.component-sandbox .span-24 {
+  width: calc(100% * (124 / 24))
+}

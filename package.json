@@ -1,17 +1,31 @@
 {
   "name": "vue-component-sandbox",
-  "version": "0.1.0",
-  "private": true,
+  "version": "0.3.0-alpha.3",
+  "description": "A vue component sandbox that is quick and easy to use.",
+  "author": "Adam You <upstairs0102@gmail.com>",
+  "license": "MIT",
+  "keywords": [
+    "vue",
+    "component",
+    "sandbox",
+    "vue-component"
+  ],
+  "main": "lib/main.js",
+  "files": [
+    "lib/*",
+    "src/components/ComponentSandbox/*"
+  ],
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build"
   },
   "dependencies": {
-    "core-js": "^3.6.5",
-    "vue": "^3.0.0",
-    "vue-router": "^4.0.0-0"
   },
   "devDependencies": {
+    "core-js": "^3.6.5",
+    "vue": "^3.0.0",
+    "vue-json-pretty": "^2.0.0-rc.2",
+    "vue-router": "^4.0.0-0",
     "@vue/cli-plugin-babel": "~4.5.0",
     "@vue/cli-plugin-router": "~4.5.0",
     "@vue/cli-service": "~4.5.0",
