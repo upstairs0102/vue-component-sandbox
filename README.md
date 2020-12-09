@@ -2,7 +2,7 @@
 
 ## Features
 
-快速在Vue專案中建立Component的測試沙箱，提供操作面板可檢視/操作Props以及監聽事件，並依造資料將Component即時呈現在畫面中、操作Component時也會將資料呈現在面板當中。
+快速在Vue專案中建立Component的測試沙箱，可操作Props以及監聽事件，將資料雙向綁定即時預覽Component。
 
 ## Links
 
@@ -12,7 +12,7 @@ Demo: http://shangdeyou.github.io/vue-component-sandbox/demo
 
 ## Environment
 
-* 依賴`vue-json-pretty`套件v1.x版本（建議v1.7.1以上），目前僅支援Vue v2.x。
+* 依賴`vue-json-pretty`套件v1.x版本（建議v1.7.1以上）。
 
 * 支援Vue v2.x。兼容Vue v3.x的程式已完成，但因依賴的套件`vue-json-pretty`在Vue v3.x環境下我的測試還是有些無法避開的問題，暫不建議使用在Vue v3.x版本環境中。短期間內會先等待對方修復，或者未來考慮改使用其他的Json檢視工具。
 
