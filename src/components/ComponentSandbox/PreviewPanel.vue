@@ -1,8 +1,8 @@
 <template>
-  <div :class="{'expand-style':isExpanded}">
+  <div :class="{'expand':isExpanded}">
     <div>
       <div :span="20">
-        <h4>Preview</h4>
+        <h4 :class="{'expand-title':isExpanded}">Preview</h4>
         <div
           style="text-align:right"
           :style="collapseStyle">
