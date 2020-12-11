@@ -12,14 +12,25 @@ Demo: http://shangdeyou.github.io/vue-component-sandbox/demo
 
 ## Environment
 
-* 依賴`vue-json-pretty`套件v1.x版本（建議v1.7.1以上）。
+*支援Vue v2.x及v3.x。依賴`vue-json-pretty`套件，並且必須安裝對應版本：
 
-* 支援Vue v2.x。兼容Vue v3.x的程式已完成，但因依賴的套件`vue-json-pretty`在Vue v3.x環境下我的測試還是有些無法避開的問題，暫不建議使用在Vue v3.x版本環境中。短期間內會先等待對方修復，或者未來考慮改使用其他的Json檢視工具。
+Vue v2.x => vue-json-pretty **v1.7.1** 以上
+
+Vue v3.x，=> vue-json-pretty **v2.0.0-rc3** 以上
 
 ## Install
 
+Vue v2.x
+
 ```
 npm install vue-json-pretty@1.7.1 --save
+npm install vue-component-sandbox --save
+```
+
+Vue v3.x
+
+```
+npm install vue-json-pretty@2.0.0-rc.3 --save
 npm install vue-component-sandbox --save
 ```
 
@@ -33,32 +44,20 @@ npm install vue-component-sandbox --save
 <template>
   <component-sandbox
     :component="YourComponent"
-    :props="props"
-    :emits="emits">
+    :props="{ vBindName: 'defaultValue' }"
+    :emits="{ vOnName: '' }">
   </component-sandbox>
 </template>
 
 <script>
 import ComponentSandbox from 'vue-component-sandbox'
 import 'vue-component-sandbox/lib/styls.css' // optional
-import '@/YourComponent.vue' // preview component
+import '@/components/YourComponent.vue' // preview component
 
 export default {
   components: {
     ComponentSandbox,
     YourComponent
-  },
-  data () {
-    return {
-      // optional
-      props: {
-        yourComponentsVBindName: '' // [key]: v-bind name [value]: default value
-      },
-      // optional
-      emits: {
-        yourComponentsVOnName: '', // [key]: v-on name [value]: '' as default value
-      }
-    }
   }
 }
 </script>
@@ -71,13 +70,19 @@ export default {
 ```
 <template>
   <component-sandbox
-    :props="props"
-    :emits="emits">
+    :props="{
+      value: '',
+      label: 'Autocomplete Input',
+      placeholder: '請輸入'
+    }"
+    :emits="{
+      enter: '',
+      blur: ''
+    }">
     <template v-slot="{ syncProps, handleEmits }">
       <autocomplete
         :value="syncProps.value"
         :label="syncProps.label"
-        :autocomplete="syncProps.autocomplete"
         :placeholder="syncProps.placeholder"
         @enter="handleEmits.enter"
         @blur="handleEmits.blur">
@@ -85,4 +90,17 @@ export default {
     </template>
   </component-sandbox>
 </template>
+
+<script>
+import ComponentSandbox from 'vue-component-sandbox'
+import 'vue-component-sandbox/lib/styls.css' // optional
+import '@/components/Autocomplete.vue' // preview component
+
+export default {
+  components: {
+    ComponentSandbox,
+    Autocomplete
+  }
+}
+</script>
 ```

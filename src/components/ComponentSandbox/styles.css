@@ -9,7 +9,6 @@
   top: 60px;
   width: 100vw;
   height: calc(100vh - 60px);
-  background: #ffffff;
 }
 .component-sandbox .display-error {
   width: 100%;
@@ -20,7 +19,7 @@
   color: white;
   z-index: 10001;
 }
-.component-sandbox .expand {
+.component-sandbox .expand-style {
   z-index: 2000;
   position: fixed;
   left: 0px;
@@ -31,13 +30,11 @@
   height: 100%;
   width: 100%;
   background: rgba(0,0,0,0.8);
+  color: #ffffff;
 }
-.component-sandbox .expand > div {
+.component-sandbox .expand-style > div {
     border: 0px;
-}
-.component-sandbox .expand-title {
-  color:#ffffff;
-}
+  }
 .component-sandbox button {
   margin-left: 10px;
 }
