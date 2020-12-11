@@ -2,13 +2,7 @@
 
 ## Features
 
-快速在Vue專案中建立Component的測試沙箱，提供操作面板可檢視/操作Props以及監聽事件，並依造資料將Component即時呈現在畫面中、操作Component時也會將資料呈現在面板當中。
-
-*支援Vue v2.x及v3.x。依賴`vue-json-pretty`套件，並且必須安裝對應版本：
-
-Vue2.x => vue-json-pretty **v1.7.1** 以上
-
-Vue v3.x，=> vue-json-pretty **v2.0.0-rc2** 以上
+快速在Vue專案中建立Component的測試沙箱，可操作Props以及監聽事件，將資料雙向綁定即時預覽Component。
 
 ## Links
 
@@ -16,10 +10,17 @@ npm: https://www.npmjs.com/package/vue-component-sandbox
 
 Demo: http://shangdeyou.github.io/vue-component-sandbox/demo
 
+## Environment
+
+*支援Vue v2.x及v3.x。依賴`vue-json-pretty`套件，並且必須安裝對應版本：
+
+Vue v2.x => vue-json-pretty **v1.7.1** 以上
+
+Vue v3.x，=> vue-json-pretty **v2.0.0-rc3** 以上
+
 ## Install
 
-
-Vue2.x
+Vue v2.x
 
 ```
 npm install vue-json-pretty@1.7.1 --save
@@ -29,7 +30,7 @@ npm install vue-component-sandbox --save
 Vue v3.x
 
 ```
-npm install vue-json-pretty@2.0.0-rc.2 --save
+npm install vue-json-pretty@2.0.0-rc.3 --save
 npm install vue-component-sandbox --save
 ```
 
@@ -43,32 +44,20 @@ npm install vue-component-sandbox --save
 <template>
   <component-sandbox
     :component="YourComponent"
-    :props="props"
-    :emits="emits">
+    :props="{ vBindName: 'defaultValue' }"
+    :emits="{ vOnName: '' }">
   </component-sandbox>
 </template>
 
 <script>
 import ComponentSandbox from 'vue-component-sandbox'
 import 'vue-component-sandbox/lib/styls.css' // optional
-import '@/YourComponent.vue' // preview component
+import '@/components/YourComponent.vue' // preview component
 
 export default {
   components: {
     ComponentSandbox,
     YourComponent
-  },
-  data () {
-    return {
-      // optional
-      props: {
-        yourComponentsVBindName: '' // [key]: v-bind name [value]: default value
-      },
-      // optional
-      emits: {
-        yourComponentsVOnName: '', // [key]: v-on name [value]: '' as default value
-      }
-    }
   }
 }
 </script>
@@ -81,13 +70,19 @@ export default {
 ```
 <template>
   <component-sandbox
-    :props="props"
-    :emits="emits">
+    :props="{
+      value: '',
+      label: 'Autocomplete Input',
+      placeholder: '請輸入'
+    }"
+    :emits="{
+      enter: '',
+      blur: ''
+    }">
     <template v-slot="{ syncProps, handleEmits }">
       <autocomplete
         :value="syncProps.value"
         :label="syncProps.label"
-        :autocomplete="syncProps.autocomplete"
         :placeholder="syncProps.placeholder"
         @enter="handleEmits.enter"
         @blur="handleEmits.blur">
@@ -95,4 +90,17 @@ export default {
     </template>
   </component-sandbox>
 </template>
+
+<script>
+import ComponentSandbox from 'vue-component-sandbox'
+import 'vue-component-sandbox/lib/styls.css' // optional
+import '@/components/Autocomplete.vue' // preview component
+
+export default {
+  components: {
+    ComponentSandbox,
+    Autocomplete
+  }
+}
+</script>
 ```

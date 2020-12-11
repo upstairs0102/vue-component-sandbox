@@ -1,6 +1,6 @@
 {
   "name": "vue-component-sandbox",
-  "version": "0.3.0-alpha.3",
+  "version": "0.3.0-beta.1",
   "description": "A vue component sandbox that is quick and easy to use.",
   "author": "Adam You <upstairs0102@gmail.com>",
   "license": "MIT",
@@ -28,7 +28,7 @@
     "core-js": "^3.6.5",
     "github-fork-ribbon-css": "^0.2.3",
     "vue": "^3.0.0",
-    "vue-json-pretty": "^2.0.0-rc.2",
+    "vue-json-pretty": "^2.0.0-rc.3",
     "vue-router": "^4.0.0-0"
   }
 }

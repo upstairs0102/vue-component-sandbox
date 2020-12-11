@@ -107,14 +107,6 @@ export default {
       },
       deep: true,
       immediate: true
-    },
-    // VueJsonPretty v2.0.0-rc2不會監聽到資料變化，所以要強制重新渲染（舊版沒這個問題）
-    currentProp: {
-      async handler (key) {
-        this.isShowJsonViewer = false // VueJsonPretty v2.0.0-rc2不會監聽到資料變化，所以要強制重新渲染（舊版沒這個問題）
-        await this.$nextTick()
-        this.isShowJsonViewer = true
-      }
     }
   },
   beforeMount () {
