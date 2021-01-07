@@ -51,7 +51,7 @@ npm install vue-component-sandbox --save
 
 <script>
 import ComponentSandbox from 'vue-component-sandbox'
-import 'vue-component-sandbox/lib/styls.css' // optional
+import 'vue-component-sandbox/lib/styles.css' // optional
 import '@/components/YourComponent.vue' // preview component
 
 export default {
@@ -93,7 +93,7 @@ export default {
 
 <script>
 import ComponentSandbox from 'vue-component-sandbox'
-import 'vue-component-sandbox/lib/styls.css' // optional
+import 'vue-component-sandbox/lib/styles.css' // optional
 import '@/components/Autocomplete.vue' // preview component
 
 export default {
