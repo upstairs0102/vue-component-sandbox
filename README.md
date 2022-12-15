@@ -8,7 +8,7 @@
 
 npm: https://www.npmjs.com/package/vue-component-sandbox
 
-Demo: http://shangdeyou.github.io/vue-component-sandbox/demo
+Demo: http://upstairs0102.github.io/vue-component-sandbox/demo
 
 ## Environment
 

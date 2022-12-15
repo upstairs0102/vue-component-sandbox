@@ -1,6 +1,6 @@
 <template>
   <div>
-    <a class="github-fork-ribbon" href="https://github.com/shangdeyou/vue-component-sandbox/" data-ribbon="Fork me on GitHub" title="Fork me on GitHub">Fork me on GitHub</a>
+    <a class="github-fork-ribbon" href="https://github.com/upstairs0102/vue-component-sandbox/" data-ribbon="Fork me on GitHub" title="Fork me on GitHub">Fork me on GitHub</a>
     <div style="display:flex;justify-content:center">
       <router-view style="width:1024px"/>
     </div>
